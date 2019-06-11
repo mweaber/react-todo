@@ -3,7 +3,7 @@ const db = require("../models");
 // Defining methods for the taskController
 
 module.exports = {
-    findAll: function(req,res) {
+    findAll: function(req, res) {
         db.Task
             .find(req.query)
             .sort({ date: -1})

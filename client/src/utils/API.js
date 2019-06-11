@@ -3,7 +3,7 @@ import axios from "axios";
 export default {
 
     // Gets all tasks
-    getTask: function() {
+    getTasks: function() {
         return axios.get("/api/task");
     },
 

@@ -30,7 +30,7 @@ class Tasks extends Component {
                             <h1>What Tasks Do I Have To Complete?</h1>
                         </Jumbotron>
                         <form>
-                            <Input name="descripton" placeholder="Description (required)" />
+                            <TextArea name="descripton" placeholder="Description (required)" />
                             <Input name="completed" placeholder="Completed?" />
                             <Input name="date" placeholder="When Do You Need It Done By?" />
                             <FormBtn>Sumbit Task</FormBtn>
