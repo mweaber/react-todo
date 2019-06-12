@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 
 const taskSchema = new Schema ({
     description: {type: String, required: true},
-    completed: {type: Boolean, required: true},
+    completed: {type: Boolean},
     date: {type: Date, default: Date.now}
 });
 
