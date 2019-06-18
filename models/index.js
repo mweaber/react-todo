@@ -1,3 +1,3 @@
 module.exports = {
-    Task: require("./tasks")
-  };
+  Book: require("./book")
+};

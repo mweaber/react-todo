@@ -1,32 +1,27 @@
 const mongoose = require("mongoose");
-const db = require("./models");
+const db = require("../models");
+
+// This file empties the Books collection and inserts the books below
 
 mongoose.connect(
-    process.env.MONGODB_URI ||
-    "mongodb://localhost/reacttodolist"
+  process.env.MONGODB_URI ||
+  "mongodb://localhost/reactbookprac"
 );
 
-const taskSeed = [
-    {
-        description: "Get React To-Do App to work",
-        completed: false,
-        date: new Date(Date.now())
-    },
-    {
-        description: "Mow the lawn",
-        completed: false,
-        date: new Date(Date.now())
-    },
-    {
-        description: "Get to bed",
-        completed: false,
-        date: new Date(Date.now())
-    }
+const bookSeed = [
+  {
+    title: "Test1",
+    author: "Me",
+    synopsis:
+      "This is a test book. Next up is the D&D app you want to build.",
+    date: new Date(Date.now())
+  },
+
 ];
 
-db.Task
+db.Book
   .remove({})
-  .then(() => db.Task.collection.insertMany(taskSeed))
+  .then(() => db.Book.collection.insertMany(bookSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
